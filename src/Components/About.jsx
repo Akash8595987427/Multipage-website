@@ -1,9 +1,10 @@
 import React from 'react'
+import HeroSection from './HeroSection'
 
 const About = () => {
   return (
     <div>
-      <h1>Hello i am the About Page</h1>
+      <HeroSection info_1 = "This is Me" info_2 = "Akash Bhandari" info_3 = "I'm Akash Singh Bhandari . A Front end Web Developer and freelancer and the Fourth year student of the Btech" img="hero_about_img.jpg"/>
     </div>
   )
 }

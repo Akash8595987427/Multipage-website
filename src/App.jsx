@@ -9,6 +9,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 
+
 const App=()=>{
   return(
     <>
@@ -20,6 +21,7 @@ const App=()=>{
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer/>
     </BrowserRouter>
 
