@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSection from './HeroSection'
+import { useGlobalContext } from './Context'
 
 
 
@@ -13,13 +14,15 @@ const Home = () => {
   //   image : "hero_img.jpg"
   // }
 
+  const {updateHomePage} = useGlobalContext();
+
+  useEffect(()=> updateHomePage(), []);
+
   return (
     <div>
-      <HeroSection info_1 = "This is Me" info_2 = "Akash Bhandari" info_3 = "I'm Akash Singh Bhandari . A Front end Web Developer and freelancer and the Fourth year student of the Btech" img="hero_img.jpg"/>
-      <h1>{firstName}</h1>
-    
+      <HeroSection/>
     </div>
   )
 }
 
-export default Home
+export default Home;

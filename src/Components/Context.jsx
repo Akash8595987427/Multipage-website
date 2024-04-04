@@ -1,22 +1,64 @@
-// In the context api there is three rule
 
 
-// create a context 
-// provider
-// consumer ( Earlier we write the consumer code which is very length but now we use the useContext hook to make it shorter )
-import React, {useContext} from "react"
+
+import React, {useContext, useReducer} from "react";
+import reducer from "./reducer";
 
 const AppContext = React.createContext();
 
-const AppProvider = ({children})=>{
-// This means the component within the AppContext.Provider we can give access to all the application access so we can access it from anywhere and also provide data to it from anywhere 
-    return(<AppContext.Provider value = "Akash Singh Bhandari">         
-    {children}
-    </AppContext.Provider>)
-}
 
-// Here we are creating the global custom hook 
-const useGlobalContext=()=>{
-    return useContext(AppContext);
-}
-export {AppContext, AppProvider, useGlobalContext};
+const initialState = {
+    name : "",
+    image : "",
+};
+
+
+
+const AppProvider = ({children})=>{
+
+    const [state, dispatch] = useReducer(reducer, initialState);
+// This means the component within the AppContext.Provider we can give access to all the application access so we can access it from anywhere and also provide data to it from anywhere 
+
+    const updateHomePage=()=>{
+        return dispatch({
+        type : "HOME_UPDATE",
+        payload : {
+            name : "Technical Website",
+            image : "hero_img.jpg",
+        },
+        });
+    };
+
+
+    const updateAboutPage=()=>{
+    return dispatch({
+        type : "ABOUT_UPDATE",
+        payload : {
+            name : "Akash Singh Bhandari",
+            image : "hero_about_img.jpg"
+        }
+    })
+    }
+
+    const updateServicePage=()=>{
+        return dispatch({
+            type : "SERVICE_UPDATE",
+            payload : {
+                
+            }
+        })
+    }
+
+    return (
+        <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
+          {children}
+        </AppContext.Provider>
+      );
+    };
+    
+    // gloabal custom hook
+    const useGlobalContext = () => {
+      return useContext(AppContext);
+    };
+    
+    export { AppProvider, useGlobalContext };
