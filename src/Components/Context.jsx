@@ -1,8 +1,7 @@
 
-
-
 import React, {useContext, useReducer} from "react";
 import reducer from "./reducer";
+
 
 const AppContext = React.createContext();
 
@@ -13,11 +12,12 @@ const initialState = {
 };
 
 
-
 const AppProvider = ({children})=>{
+
 
     const [state, dispatch] = useReducer(reducer, initialState);
 // This means the component within the AppContext.Provider we can give access to all the application access so we can access it from anywhere and also provide data to it from anywhere 
+
 
     const updateHomePage=()=>{
         return dispatch({
@@ -40,6 +40,7 @@ const AppProvider = ({children})=>{
     })
     }
 
+
     const updateServicePage=()=>{
         return dispatch({
             type : "SERVICE_UPDATE",
@@ -49,6 +50,7 @@ const AppProvider = ({children})=>{
         })
     }
 
+
     return (
         <AppContext.Provider value={{ ...state, updateHomePage, updateAboutPage }}>
           {children}
@@ -56,9 +58,11 @@ const AppProvider = ({children})=>{
       );
     };
     
+
     // gloabal custom hook
     const useGlobalContext = () => {
       return useContext(AppContext);
     };
     
+
     export { AppProvider, useGlobalContext };
