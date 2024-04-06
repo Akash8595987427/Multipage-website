@@ -19,8 +19,8 @@ const HeroSection=()=>{
                     <p className=""> "I'm Akash Singh Bhandari . A Front end Web Developer and freelancer and the Fourth year student of the Btech" </p>
                     <button className="py-2 px-3 bg-purple-6000 text-white mt-10 rounded-md">Hire Me</button>
                 </div>
-                <div className="container_right  flex justify-center items-center">
-                   <img className="w-full h-auto rounded-lg" src={`./images/${image}`} alt="" />
+                <div className="container_right w-full h-full flex justify-center items-center">
+                   <img className="w-full h-auto" src={`./images/${image}`} alt="" />
                 </div>
             </div>
             </div>

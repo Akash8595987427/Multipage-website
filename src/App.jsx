@@ -7,6 +7,7 @@ import Service from "./Components/Service";
 import "./App.css"
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Error from "./Components/Error";
 
 
 
@@ -20,6 +21,8 @@ const App=()=>{
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error/>} />
+
       </Routes>
 
       <Footer/>
