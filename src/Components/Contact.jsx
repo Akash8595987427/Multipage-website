@@ -1,9 +1,12 @@
 import React from 'react'
+import Map from './Map'
+import Form from './Form'
 
 const Contact = () => {
   return (
     <div>
-      <h1> Hello i am the contact page</h1>
+      <Map/>
+      <Form/>
     </div>
   )
 }
