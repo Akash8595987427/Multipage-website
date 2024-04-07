@@ -11,7 +11,7 @@ const HeroSection=()=>{
     
     return(
         <>
-            <div className="section w-full h-[80vh] flex justify-center items-center">
+            <div className="section w-full h-[100vh] flex justify-center items-center">
             <div className="container w-[85%] h-full grid  grid-cols-2  place-items-center  gap-8">
                 <div className="container_left   flex flex-col justify-start items-start  gap-6">
                     <h1 className=" "> This is Me </h1>
