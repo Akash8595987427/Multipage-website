@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import HeroSection from './HeroSection'
 import { useGlobalContext } from './Context'
+import Service from './Service';
+import Contact from './Contact'
 
 
 
@@ -21,6 +23,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
+      <Service/>
+      <Contact/>
     </div>
   )
 }

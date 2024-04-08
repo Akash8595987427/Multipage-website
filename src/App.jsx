@@ -8,6 +8,7 @@ import "./App.css"
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Error from "./Components/Error";
+import GoToTop from "./Components/GoToTop";
 
 
 
@@ -22,15 +23,10 @@ const App=()=>{
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error/>} />
-
       </Routes>
-
+      <GoToTop/>
       <Footer/>
     </BrowserRouter>
-
-    
-
-
     </>
   )
 }
