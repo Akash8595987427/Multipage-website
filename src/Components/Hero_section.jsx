@@ -18,8 +18,8 @@ const Hero_section=()=>{
                         <button className="px-6 py-4 bg-black flex justify-center items-center gap-2 text-lg rounded-md ">Learn More <FaAngleRight /></button>
                     </div>
                 </div>
-                <div className="container_icon w-full h-full">
-                    <img src="../public/images/img7.png" alt="" className="w-full h-auto" />
+                <div className="container_icon w-[100%] h-auto">
+                    <img src="/images/img7.png" alt="" className="w-full h-auto" />
                 </div>
             </div>
         </div>
