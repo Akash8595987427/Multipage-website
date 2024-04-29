@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from "./Components/About";
-import Home from "./Components/Home";
-import Contact from "./Components/Contact";
-import Service from "./Components/Service";
-import "./App.css"
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Error from "./Components/Error";
-import GoToTop from "./Components/GoToTop";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Vehicle_model from "./Pages/Vehicle_models";
+import Testimonial from "./Pages/Testimonial";
+import Our_team from "./Pages/Our_team";
+import Contact from "./Pages/Contact";
+import Signin from "./Pages/Signin";
+import Register from "./Pages/Register";
+import Navbar from "./Components/Navbar";
+
 
 
 
@@ -16,16 +17,17 @@ const App=()=>{
   return(
     <>
     <BrowserRouter>
-      <Header/>
+     <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Service />} />
+        <Route path="/vehicle_model" element={<Vehicle_model />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/our_team" element={<Our_team />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error/>} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-      <GoToTop/>
-      <Footer/>
     </BrowserRouter>
     </>
   )

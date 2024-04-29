@@ -1,0 +1,96 @@
+import img1 from "./img1.jpg"
+import img2 from "./img2.jpg"
+import img3 from "./img3.jpg"
+import img4 from "./img4.jpg"
+import img5 from "./img5.jpg"
+import img6 from "./img6.jpg"
+
+
+const all_car_product = [
+    {
+        id: 1,
+        name: "Audi A1 S-Line",
+        image: img1,
+        model : "Audi",
+        mark : "A1",
+        year : "2012",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Manual",
+        fuel :"Gasoline" ,
+        price : "$45",
+        rating : 4.5,
+    },
+    {
+        id: 2,
+        name: "VW Golf 6",
+        image: img2,
+        model : "Golf 6",
+        mark : "Volkswagen",
+        year : "2008",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Manual",
+        fuel :"Diesel" ,
+        price : "$37",
+        rating : 4.5,
+    },
+    {
+        id: 3,
+        name: "Toyota Camry",
+        image: img3,
+        model : "Camry",
+        mark : "Toyota",
+        year : "2006",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Automatic",
+        fuel :"Hybrid" ,
+        price : "$30",
+        rating : 4.5,
+    },
+    {
+        id: 4,
+        name: "BMW 320 ModernLine",
+        image: img4,
+        model : "320",
+        mark : "BMW",
+        year : "2012",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Manual",
+        fuel :"Diesel" ,
+        price : "$35",
+        rating : 4.5,
+    },
+    {
+        id: 5,
+        name: "Mercedes-Benz GLK",
+        image: img5,
+        model : "Benz GLK",
+        mark : "Mercedes",
+        year : "2006",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Manual",
+        fuel :"Diesel" ,
+        price : "$50",
+        rating : 4.5,
+    },
+    {
+        id: 6,
+        name: "VW Passat CC",
+        image: img6,
+        model : "Passat CC",
+        mark : "Volkswagen",
+        year : "2008",
+        doors : "4/5",
+        ac : "Yes",
+        transmission : "Automatic",
+        fuel :"Gasoline" ,
+        price : "$25",
+        rating : 4.5,
+    },
+]
+
+export default all_car_product;
